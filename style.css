@@ -1,0 +1,431 @@
+/* Reset & base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit; text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%; display: block;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preloader:after {
+  content: "";
+  width: 40px; height: 40px;
+  border: 4px solid #007bff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li a {
+  font-weight: 600;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+#dark-toggle {
+  margin-left: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+/* Header */
+header {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 20px;
+}
+.typing-container {
+  border-bottom: 3px solid white;
+  padding-bottom: 10px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #007bff;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Skills */
+.skill-bar {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.skill-bar label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+.bar {
+  width: 100%;
+  background: #eee;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress {
+height: 100%;
+border-radius: 10px;
+transition: width 1.5s ease;
+}
+.progress.html {
+width: 90%;
+background: #e44d26;
+}
+.progress.css {
+width: 85%;
+background: #2965f1;
+}
+.progress.js {
+width: 80%;
+background: #f0db4f;
+}
+
+/* Counter Section */
+.counter-section {
+display: flex;
+justify-content: space-around;
+text-align: center;
+background: #007bff;
+color: white;
+padding: 40px 20px;
+border-radius: 10px;
+margin: 40px 0;
+}
+.counter-box h2 {
+font-size: 3rem;
+margin-bottom: 10px;
+}
+.counter-box p {
+font-size: 1.2rem;
+}
+
+/* Projects */
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 20px;
+}
+.project-card {
+background: white;
+border-radius: 10px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+padding: 10px;
+transition: transform 0.3s ease;
+}
+.project-card:hover {
+transform: scale(1.05);
+}
+.project-card h3 {
+margin: 10px 0 5px;
+color: #007bff;
+}
+
+/* Gallery */
+.gallery {
+display: flex;
+gap: 15px;
+justify-content: center;
+flex-wrap: wrap;
+}
+.gallery a {
+width: 150px;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+transition: transform 0.3s ease;
+}
+.gallery a:hover {
+transform: scale(1.1);
+}
+
+/* Testimonials Swiper */
+.swiper-container.testimonial {
+width: 100%;
+max-width: 600px;
+margin: auto;
+}
+.swiper-slide {
+background: #f0f8ff;
+padding: 20px;
+border-radius: 10px;
+font-style: italic;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.swiper-slide h4 {
+margin-top: 15px;
+text-align: right;
+font-style: normal;
+color: #007bff;
+}
+
+/* Contact */
+#contact-form {
+max-width: 500px;
+margin: auto;
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+#contact-form input, #contact-form textarea {
+padding: 12px;
+border-radius: 6px;
+border: 1px solid #ccc;
+font-size: 1rem;
+resize: vertical;
+}
+#contact-form button {
+background: #007bff;
+color: white;
+border: none;
+padding: 15px;
+font-size: 1.1rem;
+cursor: pointer;
+border-radius: 6px;
+transition: background 0.3s ease;
+}
+#contact-form button:hover {
+background: #0056b3;
+}
+
+/* Back to top */
+#back-to-top {
+position: fixed;
+bottom: 40px;
+right: 40px;
+background: #007bff;
+color: white;
+font-size: 24px;
+padding: 12px 16px;
+border-radius: 50%;
+display: none;
+cursor: pointer;
+z-index: 1000;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+#back-to-top.show {
+display: block;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+position: fixed;
+bottom: 100px;
+right: 40px;
+background: #25d366;
+color: white;
+font-size: 28px;
+padding: 14px 18px;
+border-radius: 50%;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+z-index: 1000;
+transition: background 0.3s ease;
+}
+.whatsapp-float:hover {
+background: #1ebe57;
+}
+
+/* Dark Mode */
+body.dark-mode {
+background: #121212;
+color: #eee;
+}
+body.dark-mode header {
+background: linear-gradient(90deg, #00c6ff 0%, #007bff 100%);
+color: #fff;
+}
+body.dark-mode nav {
+background: #222;
+box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+body.dark-mode nav ul li a {
+color: #ccc;
+}
+body.dark-mode nav ul li a.active,
+body.dark-mode nav ul li a:hover {
+color: #00c6ff;
+border-bottom-color: #00c6ff;
+}
+body.dark-mode .project-card {
+background: #1e1e1e;
+box-shadow: 0 3px 8px rgba(255,255,255,0.05);
+}
+body.dark-mode .swiper-slide {
+background: #222;
+color: #eee;
+}
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea {
+background: #333;
+color: #eee;
+border: 1px solid #555;
+}
+body.dark-mode #contact-form button {
+background: #00c6ff;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  /* Navbar - stack vertically or toggle menu */
+  nav ul {
+    flex-direction: column;
+    background: #007bff;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
+  nav ul.open {
+    transform: translateX(0);
+  }
+  nav ul li {
+    margin: 15px 0;
+  }
+  nav ul li a {
+    font-size: 1.2rem;
+  }
+
+  /* Hamburger menu button */
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  /* Header section text size */
+  header h1 {
+    font-size: 2.2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+
+  /* Sections padding */
+  section {
+    padding: 40px 20px;
+  }
+
+  /* Skill progress bars width smaller */
+  .progress-container {
+    height: 18px;
+  }
+  .progress {
+    border-radius: 9px;
+  }
+
+  /* Projects grid - one column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery images smaller */
+  .gallery a {
+    width: 120px;
+  }
+
+  /* Contact form width */
+  #contact-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Back to top button smaller and closer to edge */
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 10px 14px;
+  }
+
+  /* WhatsApp floating button smaller */
+  .whatsapp-float {
+    bottom: 80px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 14px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  header p {
+    font-size: 0.9rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+}

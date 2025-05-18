@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Advanced Portfolio</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id="preloader"></div>
+<nav id="navbar">
+  <ul>
+    <li><a href="#about" class="nav-link active">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <button id="dark-toggle">🌙</button>
+</nav>
+<header>
+  <div class="typing-container">
+    <h1>Hi, I'm <span id="typed"></span></h1>
+  </div>
+</header>
+
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>Hello! I'm a passionate developer with skills in modern web development. I build interactive and beautiful websites.</p>
+</section>
+
+<section id="skills" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="skill-bar">
+    <label>HTML</label>
+    <div class="bar">
+      <div class="progress html"></div>
+    </div>
+  </div>
+  <div class="skill-bar">
+    <label>CSS</label>
+    <div class="bar">
+      <div class="progress css"></div>
+    </div>
+  </div>
+  <div class="skill-bar">
+    <label>JavaScript</label>
+    <div class="bar">
+      <div class="progress js"></div>
+    </div>
+  </div>
+</section>
+
+<section id="counters" data-aos="fade-up" class="counter-section">
+  <div class="counter-box">
+    <h2 class="counter" data-target="50">0</h2>
+    <p>Projects Done</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="25">0</h2>
+    <p>Happy Clients</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="5">0</h2>
+    <p>Years Experience</p>
+  </div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="images/project1.jpg" alt="Project 1" />
+      <h3>Project One</h3>
+      <p>Amazing responsive website.</p>
+    </div>
+    <div class="project-card">
+      <img src="images/project2.jpg" alt="Project 2" />
+      <h3>Project Two</h3>
+      <p>Creative UI design.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" data-aos="fade-up">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <a href="C:\Users\shari\OneDrive\Desktop\Website\My protfolio\325420298_709917354187997_8507323346085181427_n.jpg"><img src="images/gallery1_thumb.jpg"alt="Gallery 1"/></a>
+    <a href="ChatGPT Image Apr 6, 2025, 11_56_04 PM.pngg"><img src="images/gallery2_thumb.jpg" alt="Gallery 2"/></a>
+    <a href="ChatGPT Image Apr 6, 2025, 11_54_35 PM.png"><img src="images/gallery3_thumb.jpg" alt="Gallery 3"/></a>
+    <a href="ChatGPT Image Apr 6, 2025, 11_54_35 PM.png"><img src="images/gallery3_thumb.jpg" alt="Gallery 3"/></a>
+    <a href="ChatGPT Image Apr 6, 2025, 11_56_04 PM.png"><img src="images/gallery3_thumb.jpg" alt="Gallery 3"/></a>
+    <a href="ChatGPT Image Apr 6, 2025, 11_56_04 PM.png"><img src="images/gallery3_thumb.jpg" alt="Gallery 3"/></a>
+  </div>
+</section>
+
+<section id="testimonials" data-aos="fade-up">
+  <h2>Testimonials</h2>
+  <div class="swiper-container testimonial">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p>"Amazing work and dedication!"</p>
+        <h4>- Client A</h4>
+      </div>
+      <div class="swiper-slide">
+        <p>"Professional and timely delivery."</p>
+        <h4>- Client B</h4>
+      </div>
+      <div class="swiper-slide">
+        <p>"Highly recommend for web projects."</p>
+        <h4>- Client C</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required />
+    <input type="email" name="user_email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<a href="#" id="back-to-top">⬆</a>
+<a href="https://wa.me/8801316785389" class="whatsapp-float" target="_blank">💬</a>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
